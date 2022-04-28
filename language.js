@@ -23,5 +23,4 @@ function getString(file) {
 module.exports = {
     language: json,
     getString: getString
-
 }
