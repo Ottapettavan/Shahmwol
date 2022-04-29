@@ -1,6 +1,6 @@
 //codded by afnanplk
 
-// added PrinceRudh
+// added RamshadSha
 
 const config = require('../../config');
 
