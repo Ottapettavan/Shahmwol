@@ -1,5 +1,5 @@
 //codded by afnanplk
-// PrinceRudh
+// RamshadSha
 
 const MyPnky = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
