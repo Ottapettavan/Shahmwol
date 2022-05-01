@@ -1,12 +1,12 @@
  /* Codded by Phaticusthiccy
 eva artificial intelligence was codded by Phaticusthiccy
 also 90% of thise code is done by Phaticusthiccy
-re-coded or modified by PrinceRudh
+re-coded or modified by RamshadSha
 to bring new ai
 */
 
 
-const Prince = require('../events');
+const Ramshad = require('../events');
 const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const https = require('https');
@@ -31,7 +31,7 @@ let wk = conf.WORKTYPE == 'public' ? false : true
 var vtalk_dsc = ''
 var reply_eva = ''
 if (conf.LANG == 'TR') vtalk_dsc = 'Eva sesli sohbetini başlatır.', reply_eva = '*Herhangi Bir Sesli Mesaja Yanıt Verin!*'
-if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Rudhra voice chat.', reply_eva = '*Reply to Any Voice Message!*'
+if (conf.LANG == 'EN') vtalk_dsc = 'Starts to Shahmwol voice chat.', reply_eva = '*Reply to Any Voice Message!*'
 if (conf.LANG == 'AZ') vtalk_dsc = 'Eva səsli söhbətinə başlayır.', reply_eva = '*Hər hansı bir səsli mesaja cavab verin!*'
 if (conf.LANG == 'PT') vtalk_dsc = 'Começa o bate-papo por voz de Eva.', reply_eva = '*Responder a qualquer mensagem de voz!*'
 if (conf.LANG == 'RU') vtalk_dsc = 'Запускает голосовой чат Eva.', reply_eva = '*Ответьте на любое голосовое сообщение!*'
@@ -63,12 +63,12 @@ const convertToWav = file => {
         .save('output.wav')
 }
 
-Prince.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Rudhra') && conf.RUDHRA_AI !== 'true') {        
+Ramshad.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
+    if (message.message.startsWith('Shahmwol') && conf.SHAHMWOl_AI !== 'true') {        
         var unique_ident = message.client.user.jid.split('@')[0]      
         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
-        var finm = message.message.replace('Rudhra', '').replace(' ', '')   
+        var finm = message.message.replace('Shahmwol', '').replace(' ', '')   
         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
         if (ainame !== 'Asena') return;
         var ldet = lngDetector.detect(finm)
@@ -80,7 +80,7 @@ Prince.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
             }
         } else { trmsg = finm }
         var uren = encodeURI(trmsg)
-        await axios.get('http://api.brainshop.ai/get?bid=164220&key=gnaRnC9taxheZSzu&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+        await axios.get('http://api.brainshop.ai/get?bid=161300&key=vqC466JudPGklGEB&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
             var fins = ''                           
             if (conf.LANG !== 'EN') {
                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -92,8 +92,8 @@ Prince.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComma
         })
     }
 }));
-Prince.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-        if (conf.RUDHRA_AI == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+Ramshad.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+        if (conf.SHAHMWOL_AI == 'true' && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
             (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
@@ -113,7 +113,7 @@ Prince.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                             }
                         } else { trmsg = finm }
                         var uren = encodeURI(trmsg)
-                        await axios.get('http://api.brainshop.ai/get?bid=164220&key=gnaRnC9taxheZSzu&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                        await axios.get('http://api.brainshop.ai/get?bid=161300&key=vqC466JudPGklGEB&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                             var fins = ''                           
                             if (conf.LANG !== 'EN') {
                                 ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -141,7 +141,7 @@ Prince.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                         }
                     } else { trmsg = finm }
                     var uren = encodeURI(trmsg)
-                    await axios.get('http://api.brainshop.ai/get?bid=164220&key=gnaRnC9taxheZSzu&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                    await axios.get('http://api.brainshop.ai/get?bid=161300&key=vqC466JudPGklGEB&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
                             ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -167,7 +167,7 @@ Prince.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
                     }
                 } else { trmsg = finm }
                 var uren = encodeURI(trmsg)
-                await axios.get('http://api.brainshop.ai/get?bid=164220&key=gnaRnC9taxheZSzu&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
+                await axios.get('http://api.brainshop.ai/get?bid=161300&key=vqC466JudPGklGEB&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
                     var fins = ''                           
                     if (conf.LANG !== 'EN') {
                         ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
@@ -181,7 +181,7 @@ Prince.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mes
         }
 
 }));
-Prince.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
+Ramshad.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true, fromMe: wk }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
     try {
         const file = await message.client.downloadAndSaveMediaMessage({
@@ -207,7 +207,7 @@ Prince.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc,dontAddCommandList: true,
                 if (ainame !== 'Asena') return;
         
                 var son = encodeURI(ssc)
-                await axios.get('http://api.brainshop.ai/get?bid=164220&key=gnaRnC9taxheZSzu&uid=' + unique_ident + '&msg=' + son).then(async (response) => {
+                await axios.get('http://api.brainshop.ai/get?bid=161300&key=vqC466JudPGklGEB&uid=' + unique_ident + '&msg=' + son).then(async (response) => {
                     var trmsg = ''
                     cevir = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
                     if ('text' in cevir) {
@@ -244,21 +244,21 @@ if (conf.LANG == 'TR') {
 }
 if (conf.LANG == 'EN') {
     fulleva_dsc = 'Activates full functional Rudhra features. Turn your account into a ai chatbot!'
-    already_on = 'Rudhra artificial intelligence is already fully functional.'
-    already_off = 'Rudhra artificial intelligence is currently running semi-functional.'
-    succ_on = 'Rudhra Opened Fully Functionally! Please wait a bit! ✅'
-    succ_off = 'Rudhra Set to Semi-Functional! Please wait a bit! ☑️'
+    already_on = 'Shahmwol artificial intelligence is already fully functional.'
+    already_off = 'Shahmol artificial intelligence is currently running semi-functional.'
+    succ_on = 'Shahmwol Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Shahmwol Set to Semi-Functional! Please wait a bit! ☑️'
 }
 if (conf.LANG == 'ML') {
     fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ Rudhra സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
-    already_on = 'Rudhra കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
-    already_off = 'Rudhra നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
-    succ_on = 'Rudhra പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
-    succ_off = 'സെമി-ഫങ്ഷണൽ ആയി Rudhra സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
+    already_on = 'Shahmwol കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
+    already_off = 'Shahmwol നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
+    succ_on = 'Shahmwol പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
+    succ_off = 'സെമി-ഫങ്ഷണൽ ആയി Shahmwol സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
 }
 
-Prince.addCommand({ pattern: 'chatbot ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.chatbot on / off' }, (async (message, match) => {
-    var pinky_status = `${conf.RUDHRA_AI}`
+Ramshad.addCommand({ pattern: 'chatbot ?(.*)', desc: fulleva_dsc, fromMe: true,dontAddCommandList: true, usage: '.chatbot on / off' }, (async (message, match) => {
+    var pinky_status = `${conf.SHAHMWOl_AI}`
     if (match[1] == 'on') {
         if (pinky_status == 'true') {
             return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
@@ -266,7 +266,7 @@ Prince.addCommand({ pattern: 'chatbot ?(.*)', desc: fulleva_dsc, fromMe: true,do
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['RUDHRA_AI']: 'true'
+                    ['SHAHMWOL_AI']: 'true'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
@@ -279,7 +279,7 @@ Prince.addCommand({ pattern: 'chatbot ?(.*)', desc: fulleva_dsc, fromMe: true,do
         else {
             await heroku.patch(baseURI + '/config-vars', { 
                 body: { 
-                    ['RUDHRA_AI']: 'false'
+                    ['SHAHMWOL_AI']: 'false'
                 } 
             });
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
