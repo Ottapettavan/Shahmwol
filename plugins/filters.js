@@ -1,5 +1,5 @@
-/* Copyright (C) 2021 PrinceRudh.
-Rudhra 
+/* Copyright (C) 2021 RamshadSha.
+Shahmwol 
 */
 const fs = require('fs')
 const Asena = require('../events');
