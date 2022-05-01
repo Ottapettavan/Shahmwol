@@ -1,4 +1,4 @@
-/* Codded by Phaticusthiccy
+ Codded by Phaticusthiccy
 re edited by farhan-dqz
 */
 
