@@ -1,12 +1,12 @@
-//codded by PrinceRudh
+//codded by ramshadsha
 
-const rudh = require('../events');
+const sha = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
 const fs = require('fs');
 const Config = require('../config')
-const anything = require('../media/rudhra');
+const anything = require('../media/shahmwol');
 const googleTTS = require('google-translate-tts');
 const Heroku = require('heroku-client');
 const heroku = new Heroku({
@@ -40,8 +40,8 @@ if (Config.LANG == 'EN') plk = 'sorry chatting in pm is not allowed'
 if (Config.LANG == 'EN') plk2 = '.block'
 if (Config.LANG == 'ML') plk = 'ക്ഷമിക്കണം PM ൽ ചാറ്റിംഗ് അനുവദനീയമല്ല'
 if (Config.LANG == 'ML') plk2 = '.block'
-rudh.addCommand({on: 'text', fromMe: false, onlyPm: true , deleteCommand: false}, (async (message, match) => {
-    if (pmblock_var == 'true' && message.jid !== '919072790587@s.whatsapp.net') {
+sha.addCommand({on: 'text', fromMe: false, onlyPm: true , deleteCommand: false}, (async (message, match) => {
+    if (pmblock_var == 'true' && message.jid !== '917736951082@s.whatsapp.net') {
         let regex1 = anything
         if (!regex1.test(message.message)) {
            await message.client.sendMessage(message.jid,plk, MessageType.text, {quoted: message.data })
