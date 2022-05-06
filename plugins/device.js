@@ -1,4 +1,4 @@
-/* Copyright ©  @PrinceRudh.
+/* Copyright ©  @RamshadSha.
 Licensed under the  GPL-3.0 License;
 you can copy file. but credit must be there!!!
 */
