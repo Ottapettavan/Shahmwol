@@ -1,4 +1,4 @@
-/* CODED BY PRINCERUDH 
+/* CODED BY RAMSHADSHA 
 */
 
 const Asena = require('../events');
@@ -91,6 +91,6 @@ await message.sendMessage(`According To My Calculations🧐\nYou Are Now ${r_tex
 
 Asena.addCommand({pattern: 'infomood', fromMe: true}, (async (message, match) => {
     
-    await message.sendMessage('*Codded by PrinceRudh*\n💻Usage: *.mood <reply>*\nℹ️Desc: Finds what your responding one‘s moods.\n🆕 _Support Filters!_');
+    await message.sendMessage('*Codded by ramshadSha*\n💻Usage: *.mood <reply>*\nℹ️Desc: Finds what your responding one‘s moods.\n🆕 _Support Filters!_');
 
 }));
