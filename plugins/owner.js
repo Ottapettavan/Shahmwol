@@ -1,10 +1,10 @@
-const Prince = require('../events');
+const Ramshad = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 
 if (Config.WORKTYPE == 'private') {
 
-    Prince.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Ramshad.addCommand({pattern: 'owner', fromMe: true, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '15369524516-1612300121@g.us') {
 
@@ -12,7 +12,7 @@ if (Config.WORKTYPE == 'private') {
         }
 
         if (Config.OWNER == 'default') {
-            await message.client.sendMessage(message.jid,'*ʀᴜᴅʜʀᴀ ʙʏ ᴘʀɪɴᴄᴇ ʀᴜᴅʜ*' , MessageType.text);
+            await message.client.sendMessage(message.jid,'*sʜᴀʜᴍᴡᴏʟ ʙʏ ʀᴀᴍsʜᴀᴅ sʜᴀ*' , MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,Config.OWNER + '\n\n---------------------', MessageType.text);
@@ -22,7 +22,7 @@ if (Config.WORKTYPE == 'private') {
 
 else if (Config.WORKTYPE == 'public') {
 
-    Prince.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
+    Ramshad.addCommand({pattern: 'owner', fromMe: false, desc: 'shows the detail of bot owner'}, (async (message, match) => {
 
         if (message.jid === '54218542512-1612300121@g.us') {
 
@@ -30,7 +30,7 @@ else if (Config.WORKTYPE == 'public') {
         }
 
         if (Config.OWNER == 'default') {
-            await message.client.sendMessage(message.jid,'*ʀᴜᴅʜʀᴀ ʙʏ ᴘʀɪɴᴄᴇ ʀᴜᴅʜ*' , MessageType.text);
+            await message.client.sendMessage(message.jid,'*sʜᴀʜᴍᴡᴏʟ ʙʏ ʀᴀᴍsʜᴀᴅ sʜᴀ*' , MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,Config.OWNER + '\n\n--------------------', MessageType.text);
